@@ -1,0 +1,12 @@
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Domain\bin\Debug\net6.0\School.Domain.deps.json
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Domain\bin\Debug\net6.0\School.Domain.dll
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Domain\bin\Debug\net6.0\School.Domain.pdb
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Domain\obj\Debug\net6.0\School.Domain.csproj.AssemblyReference.cache
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Domain\obj\Debug\net6.0\School.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Domain\obj\Debug\net6.0\School.Domain.AssemblyInfoInputs.cache
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Domain\obj\Debug\net6.0\School.Domain.AssemblyInfo.cs
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Domain\obj\Debug\net6.0\School.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Domain\obj\Debug\net6.0\School.Domain.dll
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Domain\obj\Debug\net6.0\refint\School.Domain.dll
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Domain\obj\Debug\net6.0\School.Domain.pdb
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Domain\obj\Debug\net6.0\ref\School.Domain.dll

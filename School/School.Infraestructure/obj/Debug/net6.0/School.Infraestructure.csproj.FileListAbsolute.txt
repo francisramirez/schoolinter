@@ -1,0 +1,15 @@
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Infraestructure\bin\Debug\net6.0\School.Infraestructure.deps.json
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Infraestructure\bin\Debug\net6.0\School.Infraestructure.dll
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Infraestructure\bin\Debug\net6.0\School.Infraestructure.pdb
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Infraestructure\bin\Debug\net6.0\School.Domain.dll
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Infraestructure\bin\Debug\net6.0\School.Domain.pdb
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Infraestructure\obj\Debug\net6.0\School.Infraestructure.csproj.AssemblyReference.cache
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Infraestructure\obj\Debug\net6.0\School.Infraestructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Infraestructure\obj\Debug\net6.0\School.Infraestructure.AssemblyInfoInputs.cache
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Infraestructure\obj\Debug\net6.0\School.Infraestructure.AssemblyInfo.cs
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Infraestructure\obj\Debug\net6.0\School.Infraestructure.csproj.CoreCompileInputs.cache
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Infraestructure\obj\Debug\net6.0\School.Infraestructure.csproj.CopyComplete
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Infraestructure\obj\Debug\net6.0\School.Infraestructure.dll
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Infraestructure\obj\Debug\net6.0\refint\School.Infraestructure.dll
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Infraestructure\obj\Debug\net6.0\School.Infraestructure.pdb
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Infraestructure\obj\Debug\net6.0\ref\School.Infraestructure.dll

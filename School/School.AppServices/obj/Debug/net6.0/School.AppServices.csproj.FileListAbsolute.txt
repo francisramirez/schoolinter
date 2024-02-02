@@ -1,0 +1,17 @@
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.AppServices\bin\Debug\net6.0\School.AppServices.deps.json
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.AppServices\bin\Debug\net6.0\School.AppServices.dll
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.AppServices\bin\Debug\net6.0\School.AppServices.pdb
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.AppServices\bin\Debug\net6.0\School.Domain.dll
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.AppServices\bin\Debug\net6.0\School.Infraestructure.dll
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.AppServices\bin\Debug\net6.0\School.Infraestructure.pdb
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.AppServices\bin\Debug\net6.0\School.Domain.pdb
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.AppServices\obj\Debug\net6.0\School.AppServices.csproj.AssemblyReference.cache
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.AppServices\obj\Debug\net6.0\School.AppServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.AppServices\obj\Debug\net6.0\School.AppServices.AssemblyInfoInputs.cache
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.AppServices\obj\Debug\net6.0\School.AppServices.AssemblyInfo.cs
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.AppServices\obj\Debug\net6.0\School.AppServices.csproj.CoreCompileInputs.cache
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.AppServices\obj\Debug\net6.0\School.AppServices.csproj.CopyComplete
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.AppServices\obj\Debug\net6.0\School.AppServices.dll
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.AppServices\obj\Debug\net6.0\refint\School.AppServices.dll
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.AppServices\obj\Debug\net6.0\School.AppServices.pdb
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.AppServices\obj\Debug\net6.0\ref\School.AppServices.dll

@@ -10,4 +10,6 @@ namespace School.Domain.Entities
         public int DepartmentID { get; set; }
 
     }
+   
+
 }
