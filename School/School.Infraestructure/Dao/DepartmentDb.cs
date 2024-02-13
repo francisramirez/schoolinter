@@ -6,26 +6,15 @@ using School.Infraestructure.Interfaces;
 
 namespace School.Infraestructure.Dao
 {
-    public class DepartmentDb : IDepartmentDb
+    public class DepartmentDb : DaoBase<Department>, IDepartmentDb
     {
-        public bool Exists(string name)
+        public override DataResult Save(Department entity)
         {
-            throw new NotImplementedException();
-        }
+            DataResult result = new DataResult();
 
-        public List<Department> GetAll()
-        {
-            throw new NotImplementedException();
-        }
+            // logica para almacenar el departamento //
 
-        public Department GetById(int deptoId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public DataResult Save(Department entity)
-        {
-            throw new NotImplementedException();
+            return result;
         }
     }
 }

@@ -2,48 +2,15 @@
 using School.Infraestructure.Core;
 using School.Infraestructure.Exceptions;
 using School.Infraestructure.Interfaces;
-using System.Collections;
-using System.Runtime.ConstrainedExecution;
 
 namespace School.Infraestructure.Dao
 {
-    public class CourseDb : ICourseDb
+    public class CourseDb : DaoBase<Course>, ICourseDb
     {
-
-        public bool Exists(string name)
+        public override DataResult Save(Course entity)
         {
-            throw new NotImplementedException();
+            return base.Save(entity);
         }
 
-        public List<Course> GetAll()
-        {
-             
-            throw new NotImplementedException();
-        }
-
-        public Course GetById(int deptoId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public DataResult Save(Course entity)
-        {
-            DataResult result = new DataResult();
-            try
-            {
-                if (this.Exists(entity.Title))
-                    throw new CourseException("El curso se encuentra registrado.");
-
-            }
-
-            catch (Exception ex)
-            {
-
-                result.Success = false;
-                result.Message = $"Ocurrió el siguiente error: {ex.Message}";
-
-            }
-            return result;
-        }
     }
 }

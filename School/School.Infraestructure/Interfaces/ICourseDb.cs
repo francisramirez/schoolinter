@@ -4,8 +4,8 @@ using School.Infraestructure.Core;
 
 namespace School.Infraestructure.Interfaces
 {
-    public interface ICourseDb : IDaoBase<Student>
+    public interface ICourseDb  : IDaoBase<Course>
     {
-       
+     
     }
 }
