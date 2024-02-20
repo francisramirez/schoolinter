@@ -1,0 +1,12 @@
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.ConceptualModel\bin\Debug\School.ConceptualModel.dll.config
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.ConceptualModel\bin\Debug\School.ConceptualModel.dll
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.ConceptualModel\bin\Debug\School.ConceptualModel.pdb
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.ConceptualModel\bin\Debug\EntityFramework.dll
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.ConceptualModel\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.ConceptualModel\bin\Debug\EntityFramework.xml
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.ConceptualModel\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.ConceptualModel\obj\Debug\School.ConceptualModel.csproj.AssemblyReference.cache
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.ConceptualModel\obj\Debug\School.ConceptualModel.csproj.CoreCompileInputs.cache
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.ConceptualModel\obj\Debug\School.ConceptualModel.csproj.CopyComplete
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.ConceptualModel\obj\Debug\School.ConceptualModel.dll
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.ConceptualModel\obj\Debug\School.ConceptualModel.pdb

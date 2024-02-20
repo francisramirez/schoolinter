@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SchoolModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Courses">
+    <Key>
+      <PropertyRef Name="CourseID" />
+    </Key>
+    <Property Name="CourseID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Credits" Type="int" Nullable="false" />
+    <Property Name="DepartmentID" Type="int" Nullable="false" />
+    <Property Name="CreationDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifyDate" Type="datetime" />
+    <Property Name="CreationUser" Type="int" Nullable="false" />
+    <Property Name="UserMod" Type="int" />
+    <Property Name="UserDeleted" Type="int" />
+    <Property Name="DeletedDate" Type="datetime" />
+    <Property Name="Deleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Departments">
+    <Key>
+      <PropertyRef Name="DepartmentID" />
+    </Key>
+    <Property Name="DepartmentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Budget" Type="money" Nullable="false" />
+    <Property Name="StartDate" Type="datetime" Nullable="false" />
+    <Property Name="Administrator" Type="int" />
+    <Property Name="CreationDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifyDate" Type="datetime" />
+    <Property Name="CreationUser" Type="int" Nullable="false" />
+    <Property Name="UserMod" Type="int" />
+    <Property Name="UserDeleted" Type="int" />
+    <Property Name="DeletedDate" Type="datetime" />
+    <Property Name="Deleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Instructors">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="HireDate" Type="datetime" />
+    <Property Name="CreationDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifyDate" Type="datetime" />
+    <Property Name="CreationUser" Type="int" Nullable="false" />
+    <Property Name="UserMod" Type="int" />
+    <Property Name="UserDeleted" Type="int" />
+    <Property Name="DeletedDate" Type="datetime" />
+    <Property Name="Deleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Course_Department">
+    <End Role="Departments" Type="Self.Departments" Multiplicity="1" />
+    <End Role="Courses" Type="Self.Courses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departments">
+        <PropertyRef Name="DepartmentID" />
+      </Principal>
+      <Dependent Role="Courses">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SchoolModelStoreContainer">
+    <EntitySet Name="Courses" EntityType="Self.Courses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Departments" EntityType="Self.Departments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Instructors" EntityType="Self.Instructors" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Course_Department" Association="Self.FK_Course_Department">
+      <End Role="Departments" EntitySet="Departments" />
+      <End Role="Courses" EntitySet="Courses" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
