@@ -2,21 +2,11 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "School.Domain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "compile": {
-          "bin/placeholder/School.Domain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/School.Domain.dll": {}
-        }
-      },
       "School.Infraestructure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "School.Domain": "1.0.0"
+          "School.Infraestructure": "1.0.0"
         },
         "compile": {
           "bin/placeholder/School.Infraestructure.dll": {}
@@ -28,11 +18,6 @@
     }
   },
   "libraries": {
-    "School.Domain/1.0.0": {
-      "type": "project",
-      "path": "../School.Domain/School.Domain.csproj",
-      "msbuildProject": "../School.Domain/School.Domain.csproj"
-    },
     "School.Infraestructure/1.0.0": {
       "type": "project",
       "path": "../School.Infraestructure/School.Infraestructure.csproj",
@@ -111,5 +96,16 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1108",
+      "level": "Error",
+      "message": "Cycle detected. \r\n  School.AppServices -> School.Infraestructure -> School.Infraestructure.",
+      "libraryId": "School.Infraestructure",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

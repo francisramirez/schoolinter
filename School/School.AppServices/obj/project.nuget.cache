@@ -1,8 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "SBuDhtzCbw/PMynMze/UBRnhCgcoaJN2azp0r4rETaJDHhWonn/kXM3+iuVNZ5/qheY7w/Q23QyFIYIoGoaZYg==",
-  "success": true,
+  "dgSpecHash": "CbqTzOTE/jTsfllNvV39RpOWe/BKMnkK4TY1FajHZNZeCTthJusK1jS6wRaoLJA7n4Cd1+KUmr/jH5mmmChRwQ==",
+  "success": false,
   "projectFilePath": "C:\\Users\\Francis Ramirez\\source\\repos\\schoolinter\\School\\School.AppServices\\School.AppServices.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1108",
+      "level": "Error",
+      "message": "Cycle detected. \r\n  School.AppServices -> School.Infraestructure -> School.Infraestructure.",
+      "libraryId": "School.Infraestructure",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }
