@@ -48,12 +48,12 @@ namespace School.Infraestructure.Dao
             return result;
         }
       
-        public List<TEntity> GetEntitiesWithFilters(Func<TEntity, bool> filter)
+        public virtual List<TEntity> GetEntitiesWithFilters(Func<TEntity, bool> filter)
         {
             return this.entities.Where(filter).ToList();
         }
 
-        public DataResult Update(TEntity entity)
+        public virtual DataResult Update(TEntity entity)
         {
             DataResult result = new DataResult();
 
@@ -64,7 +64,7 @@ namespace School.Infraestructure.Dao
             return result;
         }
 
-        public int Commit()
+        public virtual int Commit()
         {
             return this.context.SaveChanges();
         }
