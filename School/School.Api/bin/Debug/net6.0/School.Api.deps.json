@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v6.0": {
       "School.Api/1.0.0": {
         "dependencies": {
-          "School.Infraestructure": "1.0.0",
+          "School.AppServices": "1.0.0",
+          "School.IOC": "1.0.0",
           "Swashbuckle.AspNetCore": "6.2.3"
         },
         "runtime": {
@@ -466,6 +467,14 @@
           }
         }
       },
+      "School.AppServices/1.0.0": {
+        "dependencies": {
+          "School.Infraestructure": "1.0.0"
+        },
+        "runtime": {
+          "School.AppServices.dll": {}
+        }
+      },
       "School.Domain/1.0.0": {
         "runtime": {
           "School.Domain.dll": {}
@@ -479,6 +488,14 @@
         },
         "runtime": {
           "School.Infraestructure.dll": {}
+        }
+      },
+      "School.IOC/1.0.0": {
+        "dependencies": {
+          "School.AppServices": "1.0.0"
+        },
+        "runtime": {
+          "School.IOC.dll": {}
         }
       }
     }
@@ -811,12 +828,22 @@
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
     },
+    "School.AppServices/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "School.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "School.Infraestructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "School.IOC/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

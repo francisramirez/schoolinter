@@ -2,8 +2,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Migrations.Operations;
 using School.Api.Models.Department;
-using School.Infraestructure.Exceptions;
 using School.Infraestructure.Interfaces;
+using School.Api.Extentions;
+using School.AppServices.Contracts;
 
 namespace School.Api.Controllers
 {
@@ -11,50 +12,47 @@ namespace School.Api.Controllers
     [ApiController]
     public class DepartmentController : ControllerBase
     {
-        private readonly IDepartmentDb departmentDb;
+       
+        private readonly IDepartmentService departmentService;
 
-        public DepartmentController(IDepartmentDb departmentDb)
+        public DepartmentController(IDepartmentService departmentService)
         {
-            this.departmentDb = departmentDb;
+           
+            this.departmentService = departmentService;
         }
 
         [HttpGet("GetDepartments")]
         public IActionResult GetDepartments()
         {
-            var departments = this.departmentDb.GetAll();
+            var departments = this.departmentService.GetDepartments();
 
             return Ok(departments);
         }
         [HttpPost("Save")]
         public IActionResult Save(DepartmentCreateModel createModel)
         {
-            var result = this.departmentDb.Save(new Domain.Entities.Department()
-            {
-                Administrator = createModel.Administrator,
-                Budget = createModel.Budget,
-                CreationDate = createModel.ChangeDate,
-                CreationUser = createModel.UserId,
-                StartDate = createModel.StartDate,
-                Name = createModel.Name
-            });
 
-            return Ok(result);
+            //var deparment = createModel.ConvertFromDepartmentCreateToDeparment();
+
+            //var result = this.departmentDb.Save(deparment);
+
+            return Ok();
         }
         [HttpPost("Update")]
         public IActionResult Update(UpdateDepartmentModel updateDepartment)
         {
-            var result = this.departmentDb.Save(new Domain.Entities.Department()
-            {
-                Administrator = updateDepartment.Administrator,
-                Budget = updateDepartment.Budget,
-                CreationDate = updateDepartment.ChangeDate,
-                CreationUser = updateDepartment.UserId,
-                StartDate = updateDepartment.StartDate,
-                Name = updateDepartment.Name,
-                DepartmentID = updateDepartment.DepartmentId
-            });
+            //var result = this.departmentDb.Save(new Domain.Entities.Department()
+            //{
+            //    Administrator = updateDepartment.Administrator,
+            //    Budget = updateDepartment.Budget,
+            //    CreationDate = updateDepartment.ChangeDate,
+            //    CreationUser = updateDepartment.UserId,
+            //    StartDate = updateDepartment.StartDate,
+            //    Name = updateDepartment.Name,
+            //    DepartmentID = updateDepartment.DepartmentId
+            //});
 
-            return Ok(result);
+            return Ok();
         }
     }
 }

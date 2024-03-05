@@ -825,6 +825,19 @@
           }
         }
       },
+      "School.AppServices/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "School.Infraestructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/School.AppServices.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/School.AppServices.dll": {}
+        }
+      },
       "School.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -848,6 +861,19 @@
         },
         "runtime": {
           "bin/placeholder/School.Infraestructure.dll": {}
+        }
+      },
+      "School.IOC/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "School.AppServices": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/School.IOC.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/School.IOC.dll": {}
         }
       }
     }
@@ -2140,6 +2166,11 @@
         "version.txt"
       ]
     },
+    "School.AppServices/1.0.0": {
+      "type": "project",
+      "path": "../School.AppServices/School.AppServices.csproj",
+      "msbuildProject": "../School.AppServices/School.AppServices.csproj"
+    },
     "School.Domain/1.0.0": {
       "type": "project",
       "path": "../School.Domain/School.Domain.csproj",
@@ -2149,11 +2180,17 @@
       "type": "project",
       "path": "../School.Infraestructure/School.Infraestructure.csproj",
       "msbuildProject": "../School.Infraestructure/School.Infraestructure.csproj"
+    },
+    "School.IOC/1.0.0": {
+      "type": "project",
+      "path": "../School.IOC/School.IOC.csproj",
+      "msbuildProject": "../School.IOC/School.IOC.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "School.Infraestructure >= 1.0.0",
+      "School.AppServices >= 1.0.0",
+      "School.IOC >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
@@ -2190,8 +2227,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Francis Ramirez\\source\\repos\\schoolinter\\School\\School.Infraestructure\\School.Infraestructure.csproj": {
-              "projectPath": "C:\\Users\\Francis Ramirez\\source\\repos\\schoolinter\\School\\School.Infraestructure\\School.Infraestructure.csproj"
+            "C:\\Users\\Francis Ramirez\\source\\repos\\schoolinter\\School\\School.AppServices\\School.AppServices.csproj": {
+              "projectPath": "C:\\Users\\Francis Ramirez\\source\\repos\\schoolinter\\School\\School.AppServices\\School.AppServices.csproj"
+            },
+            "C:\\Users\\Francis Ramirez\\source\\repos\\schoolinter\\School\\School.IOC\\School.IOC.csproj": {
+              "projectPath": "C:\\Users\\Francis Ramirez\\source\\repos\\schoolinter\\School\\School.IOC\\School.IOC.csproj"
             }
           }
         }

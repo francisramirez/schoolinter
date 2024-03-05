@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "School.AppServices", "Schoo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "School.ConceptualModel", "School.ConceptualModel\School.ConceptualModel.csproj", "{9E13FF8D-76A6-422B-BFFD-625B74CC3AD7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "School.Api", "School.Api\School.Api.csproj", "{3F5B0357-DA61-496A-AB93-CD2BBAA65967}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "School.Api", "School.Api\School.Api.csproj", "{3F5B0357-DA61-496A-AB93-CD2BBAA65967}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "School.IOC", "School.IOC\School.IOC.csproj", "{4B71D14A-4AF4-43B5-94AB-CD84FFBA0AC8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{3F5B0357-DA61-496A-AB93-CD2BBAA65967}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F5B0357-DA61-496A-AB93-CD2BBAA65967}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F5B0357-DA61-496A-AB93-CD2BBAA65967}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B71D14A-4AF4-43B5-94AB-CD84FFBA0AC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B71D14A-4AF4-43B5-94AB-CD84FFBA0AC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B71D14A-4AF4-43B5-94AB-CD84FFBA0AC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B71D14A-4AF4-43B5-94AB-CD84FFBA0AC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

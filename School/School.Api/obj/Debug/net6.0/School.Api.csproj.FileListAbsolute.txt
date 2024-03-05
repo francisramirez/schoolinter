@@ -68,3 +68,7 @@ C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Api\bin\Debug\ne
 C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Api\bin\Debug\net6.0\School.Infraestructure.dll
 C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Api\bin\Debug\net6.0\School.Infraestructure.pdb
 C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Api\bin\Debug\net6.0\School.Domain.pdb
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Api\bin\Debug\net6.0\School.AppServices.dll
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Api\bin\Debug\net6.0\School.AppServices.pdb
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Api\bin\Debug\net6.0\School.IOC.dll
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Api\bin\Debug\net6.0\School.IOC.pdb

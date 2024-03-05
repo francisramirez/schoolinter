@@ -35,6 +35,8 @@ namespace School.Infraestructure.Dao
 
             try
             {
+
+                
                 if (base.Exists(dep => dep.Name == entity.Name))
                     throw new DepartmentException(this.configuration["DepartmentMessage:NameDuplicate"]);
 

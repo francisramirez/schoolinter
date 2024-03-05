@@ -1,7 +1,10 @@
 using Microsoft.EntityFrameworkCore;
+using School.AppServices.Contracts;
+using School.AppServices.Service;
 using School.Infraestructure.Context;
 using School.Infraestructure.Dao;
 using School.Infraestructure.Interfaces;
+using School.IOC.DepartmentDependencies;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,9 +12,17 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<SchoolContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("SchoolContext")));
 //builder.Services.AddDbContextPool
 
+// Depedencias el modulo de departamento //
+
+builder.Services.AddDepartmentDependency();
 
 // Add services to the container.
-builder.Services.AddTransient<IDepartmentDb, DepartmentDb>();
+//builder.Services.AddScoped<IDepartmentDb, DepartmentDb>();
+
+
+//App Services
+//builder.Services.AddTransient<IDepartmentService, DepartmentService>();
+
 
 
 builder.Services.AddControllers();
