@@ -4,6 +4,7 @@ using School.AppServices.Service;
 using School.Infraestructure.Context;
 using School.Infraestructure.Dao;
 using School.Infraestructure.Interfaces;
+using School.IOC.CourseDependencies;
 using School.IOC.DepartmentDependencies;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,6 +16,8 @@ builder.Services.AddDbContext<SchoolContext>(options => options.UseSqlServer(bui
 // Depedencias el modulo de departamento //
 
 builder.Services.AddDepartmentDependency();
+
+builder.Services.AddCourseDependency();
 
 // Add services to the container.
 //builder.Services.AddScoped<IDepartmentDb, DepartmentDb>();
