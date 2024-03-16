@@ -12,12 +12,12 @@ namespace School.Api.Controllers
     [ApiController]
     public class DepartmentController : ControllerBase
     {
-       
+
         private readonly IDepartmentService departmentService;
 
         public DepartmentController(IDepartmentService departmentService)
         {
-           
+
             this.departmentService = departmentService;
         }
 
@@ -28,15 +28,30 @@ namespace School.Api.Controllers
 
             return Ok(departments);
         }
+
+        [HttpGet("GetDepartmentByName")]
+        public async Task<IActionResult> GetDepartments(string name)
+        {
+            var result = await this.departmentService.GetDepartmentByName(name);
+
+            if (!result.Success)
+                return BadRequest(result);
+
+            return Ok(result);
+        }
         [HttpPost("Save")]
-        public IActionResult Save(DepartmentCreateModel createModel)
+        public async Task<IActionResult> Save(DepartmentCreateModel createModel)
         {
 
-            //var deparment = createModel.ConvertFromDepartmentCreateToDeparment();
+            var deparment = createModel.ConvertFromDepartmentCreateToDeparmentDto();
 
-            //var result = this.departmentDb.Save(deparment);
+            var result = await this.departmentService.AddDepartment(deparment);
 
-            return Ok();
+            if (!result.Success)
+                return BadRequest(result);
+
+
+            return Ok(result);
         }
         [HttpPost("Update")]
         public IActionResult Update(UpdateDepartmentModel updateDepartment)

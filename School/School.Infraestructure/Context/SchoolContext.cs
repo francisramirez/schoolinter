@@ -5,7 +5,7 @@ using School.Domain.Entities;
 
 namespace School.Infraestructure.Context
 {
-    public class SchoolContext : DbContext
+    public partial class SchoolContext : DbContext
     {
         public SchoolContext(DbContextOptions<SchoolContext> options) : base(options)
         {
@@ -17,5 +17,11 @@ namespace School.Infraestructure.Context
         public DbSet<Department>? Departments { get; set; }
         public DbSet<Course>? Courses { get; set; }
         #endregion
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            OnModelCreatingGeneratedProcedures(modelBuilder);
+        }
     }
 }

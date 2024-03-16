@@ -1,0 +1,12 @@
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Modeling\bin\Debug\net6.0\School.Modeling.deps.json
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Modeling\bin\Debug\net6.0\School.Modeling.dll
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Modeling\bin\Debug\net6.0\School.Modeling.pdb
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Modeling\obj\Debug\net6.0\School.Modeling.csproj.AssemblyReference.cache
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Modeling\obj\Debug\net6.0\School.Modeling.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Modeling\obj\Debug\net6.0\School.Modeling.AssemblyInfoInputs.cache
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Modeling\obj\Debug\net6.0\School.Modeling.AssemblyInfo.cs
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Modeling\obj\Debug\net6.0\School.Modeling.csproj.CoreCompileInputs.cache
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Modeling\obj\Debug\net6.0\School.Modeling.dll
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Modeling\obj\Debug\net6.0\refint\School.Modeling.dll
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Modeling\obj\Debug\net6.0\School.Modeling.pdb
+C:\Users\Francis Ramirez\source\repos\schoolinter\School\School.Modeling\obj\Debug\net6.0\ref\School.Modeling.dll
