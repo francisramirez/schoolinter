@@ -28,7 +28,7 @@ namespace School.Infraestructure.Dao
             {
                 courses = (from co in context.Courses
                            join depto in context.Departments on co.DepartmentID equals depto.DepartmentID
-                           where co.Deleted == false 
+                           where co.Deleted == false
                            && depto.Deleted == false
                            group new { depto.Name } by depto.Name
                           into myGroup
@@ -111,9 +111,9 @@ namespace School.Infraestructure.Dao
             return courses;
         }
 
-        public override DataResult Save(Course entity)
+        public async override Task<DataResult> Save(Course entity)
         {
-            return base.Save(entity);
+            return await base.Save(entity);
         }
 
     }

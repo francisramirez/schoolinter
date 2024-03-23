@@ -4,19 +4,19 @@ namespace School.Infraestructure.Core
 {
     public interface IDaoBase<TEntity> where TEntity : class
     {
-        DataResult Save(TEntity entity);
+        Task<DataResult> Save(TEntity entity);
 
-        DataResult Update(TEntity entity);
+        Task<DataResult> Update(TEntity entity);
        
-        List<TEntity> GetAll();
+       Task<List<TEntity>> GetAll();
 
-        List<TEntity> GetEntitiesWithFilters(Func<TEntity, bool> filter);
+        Task<List<TEntity>> GetEntitiesWithFilters(Func<TEntity, bool> filter);
 
-        TEntity GetById(int Id);
+        Task<TEntity> GetById(int Id);
 
         bool Exists(Func<TEntity, bool> filter);
 
-        int Commit();
+        Task<int> Commit();
     }
     
 }

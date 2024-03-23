@@ -54,9 +54,11 @@ namespace School.Api.Controllers
             return Ok(result);
         }
         [HttpPost("Update")]
-        public IActionResult Update(UpdateDepartmentModel updateDepartment)
+        public async Task<IActionResult> Update(UpdateDepartmentModel updateDepartment)
         {
-            //var result = this.departmentDb.Save(new Domain.Entities.Department()
+
+            //var result = this.departmentService.u
+            //var result = this.departmtDb.Save(new Domain.Entities.Department()
             //{
             //    Administrator = updateDepartment.Administrator,
             //    Budget = updateDepartment.Budget,

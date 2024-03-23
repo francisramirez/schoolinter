@@ -28,24 +28,24 @@ namespace School.Infraestructure.Dao
             this.configuration = configuration;
         }
 
-       
-        public override List<Department> GetAll()
+
+        public async override Task<List<Department>> GetAll()
         {
-            return base.GetEntitiesWithFilters(dep => !dep.Deleted);
+            return await base.GetEntitiesWithFilters(dep => !dep.Deleted);
         }
-        public override DataResult Save(Department entity)
+        public async override Task<DataResult> Save(Department entity)
         {
             DataResult result = new DataResult();
 
             try
             {
 
-                
+
                 if (base.Exists(dep => dep.Name == entity.Name))
                     throw new DepartmentException(this.configuration["DepartmentMessage:NameDuplicate"]);
 
-                base.Save(entity);
-                base.Commit();
+
+                await base.Save(entity);
 
             }
             catch (Exception ex)
@@ -58,13 +58,13 @@ namespace School.Infraestructure.Dao
             }
             return result;
         }
-        public override DataResult Update(Department entity)
+        public override async Task<DataResult> Update(Department entity)
         {
             DataResult result = new DataResult();
             try
             {
-              
-                Department departmentToUpdate = base.GetById(entity.DepartmentID);
+
+                Department departmentToUpdate = await base.GetById(entity.DepartmentID);
 
                 departmentToUpdate.ModifyDate = entity.ModifyDate;
                 departmentToUpdate.UserMod = entity.UserMod;
@@ -75,7 +75,7 @@ namespace School.Infraestructure.Dao
 
 
                 base.Update(entity);
-                base.Commit();
+                await base.Commit();
             }
             catch (Exception ex)
             {
@@ -87,16 +87,16 @@ namespace School.Infraestructure.Dao
             return result;
         }
         #region "Llamadas a los procedures"
-        public async Task<int> AgregarDepartamentoAsync(string p_Name, 
-                                                       decimal? p_Budget, 
-                                                       DateTime? p_StartDate, 
-                                                       int? p_Administrator, 
-                                                       int? p_CreateUser, 
-                                                       OutputParameter<string> p_result, 
+        public async Task<int> AgregarDepartamentoAsync(string p_Name,
+                                                       decimal? p_Budget,
+                                                       DateTime? p_StartDate,
+                                                       int? p_Administrator,
+                                                       int? p_CreateUser,
+                                                       OutputParameter<string> p_result,
                                                        OutputParameter<int> returnValue = null,
                                                        CancellationToken cancellationToken = default)
         {
-           
+
             var parameterp_result = new SqlParameter
             {
                 ParameterName = "p_result",
@@ -151,7 +151,7 @@ namespace School.Infraestructure.Dao
                 parameterreturnValue,
             };
             var _ = await this.context.Database.ExecuteSqlRawAsync("EXEC @returnValue = [dbo].[AgregarDepartamento] @p_Name, @p_Budget, @p_StartDate, @p_Administrator, @p_CreateUser, @p_result OUTPUT", sqlParameters, cancellationToken);
-                     
+
             p_result.SetValue(parameterp_result.Value);
             returnValue?.SetValue(parameterreturnValue.Value);
 
@@ -199,7 +199,7 @@ namespace School.Infraestructure.Dao
                 parameterreturnValue,
             };
 
-           
+
             var data = await this.context.SqlQueryAsync<ObtenerDepartamentos>("EXEC @returnValue = [dbo].[ObtenerDepartamentosPorNombre] @p_Name", sqlParameters, cancellationToken);
 
             returnValue?.SetValue(parameterreturnValue.Value);

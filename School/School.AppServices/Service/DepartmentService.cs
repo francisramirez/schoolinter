@@ -1,19 +1,22 @@
-﻿using School.AppServices.Contracts;
+﻿using Microsoft.Extensions.Logging;
+using School.AppServices.Contracts;
 using School.AppServices.Core;
 using School.AppServices.Dtos;
 using School.Infraestructure.Core;
 using School.Infraestructure.Interfaces;
-using System.Diagnostics;
+
 
 namespace School.AppServices.Service
 {
     public class DepartmentService : IDepartmentService
     {
         private readonly IDepartmentDb departmentDb;
+        private readonly ILogger<DepartmentService> logger;
 
-        public DepartmentService(IDepartmentDb departmentDb)
+        public DepartmentService(IDepartmentDb departmentDb, ILogger<DepartmentService> logger)
         {
             this.departmentDb = departmentDb;
+            this.logger = logger;
         }
 
         public async Task<ServiceResult> AddDepartment(DepartmentAddDto departmentAddDto)
@@ -47,6 +50,7 @@ namespace School.AppServices.Service
 
             try
             {
+
                 result.Data = await this.departmentDb.ObtenerDepartamentosPorNombreAsync(name);
             }
             catch (Exception ex)
@@ -59,7 +63,7 @@ namespace School.AppServices.Service
             return result;
         }
 
-        public ServiceResult GetDepartments()
+        public async Task<ServiceResult> GetDepartments()
         {
             ServiceResult result = new ServiceResult();
 
@@ -67,7 +71,7 @@ namespace School.AppServices.Service
             {
 
                 //LINQ
-                var query = (from depto in this.departmentDb.GetAll()
+                var query = (from depto in await this.departmentDb.GetAll()
                              where depto.Deleted == false
                              orderby depto.CreationDate descending
                              select new Models.DepartmentModel()
@@ -80,29 +84,13 @@ namespace School.AppServices.Service
                              }).ToList();
 
 
-                //Expresiones lambda //
-
-                //var query2 = this.departmentDb.GetEntitiesWithFilters(cd => cd.Deleted == false)
-                //                              .Select(cd => new Models.DepartmentModel() 
-                //                              {
-                //                                  Budget = cd.Budget,
-                //                                  CreationDate = cd.CreationDate,
-                //                                  DepartmentId = cd.DepartmentID,
-                //                                  Name = cd.Name
-                //                              }).ToList();
-
-
-
-                
-
-
                 result.Data = query;
 
             }
             catch (Exception ex)
             {
 
-                throw;
+                this.logger.LogError($"Error: { ex.Message }", ex.ToString());
             }
 
             return result;

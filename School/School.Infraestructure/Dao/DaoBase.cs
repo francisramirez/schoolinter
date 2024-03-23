@@ -11,13 +11,13 @@ namespace School.Infraestructure.Dao
 {
     public abstract class DaoBase<TEntity> : IDaoBase<TEntity> where TEntity : class
     {
-      
+
         private readonly SchoolContext context;
         private DbSet<TEntity> entities;
 
         public DaoBase(SchoolContext context)
         {
-           
+
             this.context = context;
             this.entities = context.Set<TEntity>();
         }
@@ -26,47 +26,41 @@ namespace School.Infraestructure.Dao
             return this.entities.Any(filter);
         }
 
-        public virtual List<TEntity> GetAll()
-        {
+        public async virtual Task<List<TEntity>> GetAll() => await this.entities.ToListAsync();
 
-            return this.entities.ToList();
-        }
+        public async virtual Task<TEntity> GetById(int id)
+        => await this.entities.FindAsync(id);
 
-        public virtual TEntity GetById(int id)
-        {
-            return this.entities.Find(id);
-        }
-
-        public virtual DataResult Save(TEntity entity)
+        public virtual async Task<DataResult> Save(TEntity entity)
         {
             DataResult result = new DataResult();
 
             this.entities.Add(entity);
 
+            await this.Commit();
+
             result.Success = true;
 
             return result;
         }
-      
-        public virtual List<TEntity> GetEntitiesWithFilters(Func<TEntity, bool> filter)
-        {
-            return this.entities.Where(filter).ToList();
-        }
 
-        public virtual DataResult Update(TEntity entity)
+        public async virtual Task<List<TEntity>> GetEntitiesWithFilters(Func<TEntity, bool> filter) => this.entities.Where(filter).ToList();
+
+        public virtual async Task<DataResult> Update(TEntity entity)
         {
             DataResult result = new DataResult();
 
             this.entities.Update(entity);
 
+            await this.Commit();
+
             result.Success = true;
 
             return result;
         }
 
-        public virtual int Commit()
-        {
-            return this.context.SaveChanges();
-        }
+        public async virtual Task<int> Commit() => await this.context.SaveChangesAsync();
+
+         
     }
 }
