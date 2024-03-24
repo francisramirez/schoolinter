@@ -10,6 +10,6 @@ namespace School.AppServices.Contracts
         public Task<ServiceResult> GetDepartments();
         public Task<ServiceResult> GetDepartmentByName(string name);
         public Task<ServiceResult> AddDepartment(DepartmentAddDto departmentAddDto);
-
+         
     }
 }

@@ -22,17 +22,17 @@ namespace School.Api.Controllers
         }
 
         [HttpGet("GetDepartments")]
-        public IActionResult GetDepartments()
+        public async Task<IActionResult> GetDepartments()
         {
-            var departments = this.departmentService.GetDepartments();
+            var departments = await this.departmentService.GetDepartments();
 
             return Ok(departments);
         }
 
-        [HttpGet("GetDepartmentByName")]
-        public async Task<IActionResult> GetDepartments(string name)
+        [HttpPost("GetDepartmentByName")]
+        public async Task<IActionResult> GetDepartments([FromBody] SearchDepartmentModel searchDepartment)
         {
-            var result = await this.departmentService.GetDepartmentByName(name);
+            var result = await this.departmentService.GetDepartmentByName(searchDepartment.Name);
 
             if (!result.Success)
                 return BadRequest(result);
@@ -40,7 +40,7 @@ namespace School.Api.Controllers
             return Ok(result);
         }
         [HttpPost("Save")]
-        public async Task<IActionResult> Save(DepartmentCreateModel createModel)
+        public async Task<IActionResult> Save([FromBody] DepartmentCreateModel createModel)
         {
 
             var deparment = createModel.ConvertFromDepartmentCreateToDeparmentDto();
@@ -56,7 +56,7 @@ namespace School.Api.Controllers
         [HttpPost("Update")]
         public async Task<IActionResult> Update(UpdateDepartmentModel updateDepartment)
         {
-
+           
             //var result = this.departmentService.u
             //var result = this.departmtDb.Save(new Domain.Entities.Department()
             //{
